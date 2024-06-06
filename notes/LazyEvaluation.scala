@@ -18,14 +18,14 @@ import java.util.Calendar
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-object LazyEvaluation extends App {
+object LazyEvaluation extends App:
   // Opposed to lazy evaluation, expression are evaluated at the time of the
   // program execution
 
-  val myNum = 10 // <- Immediately evaluated
+  val myNum     = 10 // <- Immediately evaluated
   var myNextNum = 11 // <- Immediately evaluated
 
-  println(myNum) // 10
+  println(myNum)     // 10
   println(myNextNum) // 11
 
   // On the above code snippet, both are evaluated immediately, irrespective of
@@ -33,11 +33,11 @@ object LazyEvaluation extends App {
   // before eagerTime and after the sleep this has higher value
 
   lazy val lazyTime = Calendar.getInstance.getTime // <- Delayed evaluation
-  val eagerTime = Calendar.getInstance.getTime // <- Immediate evaluation
+  val eagerTime     = Calendar.getInstance.getTime // <- Immediate evaluation
 
   Thread.sleep(2000) // Wait 2 seconds to see the difference
 
-  println(lazyTime) // <- Evaluated here
+  println(lazyTime)  // <- Evaluated here
   println(eagerTime) // <- Already evaluated
 
   // Another way for evaluation lazy is to ask the compiler for delayed
@@ -50,4 +50,3 @@ object LazyEvaluation extends App {
 
   // When myMethod is called, the Int argument is not evaluated. It's evaluated
   // at the time of printing because that is when it is needed
-}
