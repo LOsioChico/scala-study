@@ -18,7 +18,7 @@ import java.util.Calendar
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-object LazyEvaluation extends App:
+object LazyEvaluation extends App {
   // Opposed to lazy evaluation, expression are evaluated at the time of the
   // program execution
 
@@ -50,3 +50,4 @@ object LazyEvaluation extends App:
 
   // When myMethod is called, the Int argument is not evaluated. It's evaluated
   // at the time of printing because that is when it is needed
+}
