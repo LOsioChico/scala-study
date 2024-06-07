@@ -20,7 +20,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-object MemoizationImplements extends App {
+object Memoization extends App {
   // Factorial without memoization, it performs computation in ever spet, which
   // can be seen in the console output. Running again it will be recomputed
   def calcFactorial(x: Int): Int = {
