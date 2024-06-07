@@ -123,5 +123,19 @@ object Streams extends App {
 
   // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-  // TODO - Fibonacci series
+  def createFiboSeries(a: Int = 0, b: Int = 1): Stream[Int] = {
+    cons(a, createFiboSeries(b, a + b))
+  }
+
+  val myFiboSeries = createFiboSeries()
+  println(myFiboSeries) // <- Stream(0, <not computed>)
+
+  myFiboSeries.take(7).foreach(println) // <- We limited computation to first 7
+  // 0
+  // 1
+  // 1
+  // 2
+  // 3
+  // 5
+  // 8
 }
