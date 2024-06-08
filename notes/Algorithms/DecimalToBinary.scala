@@ -4,6 +4,11 @@
  *
  * To get the binary number we need to convert the base 10 numbers to base 2.
  *
+ * First, we need to creates a sequence of numbers by dividing the given number
+ * by 2 ultil it is less than 2 and save the quotient, then divide each number
+ * by 2 and store the remainder. The bits are accumulated in this container in
+ * reverse order so we can use the reverse method.
+ *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Reference: Data Structures and Algorithms with Scala A Practitioners Approach
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
