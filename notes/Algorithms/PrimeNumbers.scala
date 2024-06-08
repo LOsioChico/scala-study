@@ -32,20 +32,6 @@ object PrimeNumbers extends App {
       val primesLowerThanNumSqrt = primes.takeWhile(_ <= math.sqrt(num))
       !primesLowerThanNumSqrt.exists(prime => num % prime == 0)
 
-  primes.take(15).foreach(println)
-  // 2
-  // 3
-  // 5
-  // 7
-  // 11
-  // 13
-  // 17
-  // 19
-  // 23
-  // 29
-  // 31
-  // 37
-  // 41
-  // 43
-  // 47
+  println(primes.take(500000).toList)
+  // List(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47)
 }
