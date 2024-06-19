@@ -14,8 +14,11 @@ object SeqOperations extends App {
   val splitAt = list.splitAt(2) // Same as (list take 2, list drop 2)
   println(splitAt) // <- (List(1, 2),List(3, 4, 5))
 
-  val concat = list ++ List(6, 7, 8) // Concatenation, complexity O(n)
-  println(concat) // <- List(1, 2, 3, 4, 5, 6, 7, 8)
+  val concat = list ++ "ab" // Concatenation, complexity O(n)
+  println(concat) // <- List(1, 2, 3, 4, 5, a, b)
+
+  val typeSafeConcat = list ::: List(6, 7, 8) // Concatenation, complexity O(n)
+  println(typeSafeConcat) // <- List(1, 2, 3, 4, 5, 6, 7, 8)
 
   val filterNot = list.filterNot(_ % 2 == 0)
   println(filterNot) // <- List(1, 3, 5)
@@ -35,4 +38,10 @@ object SeqOperations extends App {
   // Same as (xs takeWhile p, xs dropWhile p)
   val span = list.span(_ < 4)
   println(span) // <- (List(1, 2, 3),List(4, 5))
+
+  val groupBy = list.groupBy(_ % 2)
+  println(groupBy) // <- Map(1 -> List(1, 3, 5), 0 -> List(2, 4))
+
+  val distinct = List(1, 2, 1, 3, 4, 2, 5).distinct // Removes duplicates
+  println(distinct) // <- List(1, 2, 3, 4, 5)
 }
