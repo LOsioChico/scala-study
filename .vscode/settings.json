@@ -6,5 +6,8 @@
     "**/.bsp": true,
     "**/.metals": true,
     "**/.scala-build": true
+  },
+  "github.copilot.enable": {
+    "*": false,
   }
 }
