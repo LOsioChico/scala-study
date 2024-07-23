@@ -16,17 +16,17 @@
 
 object BinarySearch extends App {
 
-  def findMaxSteps(listLength: Int): Int =
-    val seqOfDivByTwo = Iterator.iterate(listLength.toDouble)(_ / 2)
+  def findMaxSteps(namesList: List[Int]): Int =
+    val seqOfDivByTwo = Iterator.iterate(namesList.length.toDouble)(_ / 2)
     val numOfSteps    = seqOfDivByTwo.takeWhile(_ > 1).length
     numOfSteps
 
   // 1.1
-  val listLength11 = 128
-  println(findMaxSteps(listLength11)) // <- 7
+  val namesList11 = List.range(0, 128)
+  println(findMaxSteps(namesList11)) // <- 7
 
   // 1.2
-  val listLenght12 = listLength11 * 2
-  println(findMaxSteps(listLenght12)) // <- 8
+  val namesList12 = List.range(0, namesList11.length * 2)
+  println(findMaxSteps(namesList12)) // <- 8
   
 }
