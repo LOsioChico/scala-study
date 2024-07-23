@@ -10,7 +10,7 @@
  * number of steps now?
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Reference: Grokking Algorithms Illustrated Programmers Curious
+ * Reference: Grokking Algorithms Illustrated Programmers Curious (Ch1)
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
