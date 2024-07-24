@@ -15,7 +15,7 @@
 
 object Recursion extends App {
 
-  val numbers = List.range(1, 10)
+  val numbers = List(2, 4, 6, 8, 10, 9, 7, 5, 3)
 
   // 4.1
   def sum(nums: List[Int]): Int =
@@ -23,7 +23,7 @@ object Recursion extends App {
       case head :: next => head + sum(next)
       case Nil          => 0
 
-  println(sum(numbers)) // <- 45
+  println(sum(numbers)) // <- 54
 
   // 4.2
   def listLength(nums: List[Int]): Int =
@@ -43,6 +43,6 @@ object Recursion extends App {
 
     loop(sourceNums)
 
-  println(findMaxNum(numbers)) // <- 9
+  println(findMaxNum(numbers)) // <- 10
 
 }
