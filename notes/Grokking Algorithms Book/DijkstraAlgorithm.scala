@@ -69,6 +69,31 @@ object DijkstraAlgorithm extends App {
 
   println(computeDijkstra(graph1, costs1, parents1)(Node("finish"))) // 8
 
+  // 7.2
+  val graph2 = Map(
+    Node("start")  -> Map(Node("A") -> 10),
+    Node("A")      -> Map(Node("B") -> 20),
+    Node("B")      -> Map(Node("C") -> 1, Node("finish") -> 30),
+    Node("C")      -> Map(Node("A") -> 1),
+    Node("finish") -> Map()
+  )
+
+  val costs2 = Map(
+    Node("A")      -> 10,
+    Node("B")      -> Int.MaxValue,
+    Node("C")      -> Int.MaxValue,
+    Node("finish") -> Int.MaxValue
+  )
+
+  val parents2 = Map(
+    Node("A")      -> Node("start"),
+    Node("B")      -> Node(""),
+    Node("C")      -> Node(""),
+    Node("finish") -> Node("")
+  )
+
+  println(computeDijkstra(graph2, costs2, parents2)(Node("finish"))) // 60
+
 }
 
 case class Node(name: String)
