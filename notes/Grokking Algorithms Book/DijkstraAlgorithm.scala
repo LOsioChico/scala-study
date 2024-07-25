@@ -13,6 +13,8 @@
 object DijkstraAlgorithm extends App {
 
   def computeDijkstra(graph: Map[Node, Map[Node, Int]], nodeWeights: Map[Node, Int], nodeParents: Map[Node, Node]) =
+    assert(graph.values.forall(_.values.forall(_ >= 0)), "Graph contains negative edge(s)")
+
     def findLowestWeightNode(nodeWeights: Map[Node, Int], processedNodes: Set[Node]) =
       nodeWeights
         .filterNot { case (node, _) => processedNodes.contains(node) }
@@ -93,6 +95,33 @@ object DijkstraAlgorithm extends App {
   )
 
   println(computeDijkstra(graph2, costs2, parents2)(Node("finish"))) // 60
+
+  // 7.3
+  val graph3 = Map(
+    Node("start")  -> Map(Node("A") -> 2, Node("B") -> 2),
+    Node("A")      -> Map(Node("finish") -> 2, Node("C") -> 2),
+    Node("B")      -> Map(Node("A") -> 2),
+    Node("C")      -> Map(Node("B") -> -1, Node("finish") -> 2),
+    Node("finish") -> Map()
+  )
+
+  val costs3 = Map(
+    Node("A")      -> 2,
+    Node("B")      -> 2,
+    Node("C")      -> Int.MaxValue,
+    Node("finish") -> Int.MaxValue
+  )
+
+  val parents3 = Map(
+    Node("A")      -> Node("start"),
+    Node("B")      -> Node("start"),
+    Node("C")      -> Node(""),
+    Node("finish") -> Node("")
+  )
+
+  // AssertionError: assertion failed: Graph contains negative edge(s)
+  // Negative edges are not allowed in Dijkstra's algorithm
+  println(computeDijkstra(graph3, costs3, parents3)(Node("finish")))
 
 }
 
