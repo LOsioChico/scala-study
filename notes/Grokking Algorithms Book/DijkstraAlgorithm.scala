@@ -28,7 +28,7 @@ object DijkstraAlgorithm extends App {
     ): Map[Node, Int] =
       findLowestWeightNode(nodeWeights, processedNodes) match {
         case Some((node, weight)) =>
-          val newProcessedNodes = processedNodes + node
+          val updatedProcessedNodes = processedNodes + node
           val neighbors         = graph(node)
           val (updatedNodeWeights, updatedNodeParents) = neighbors.foldLeft((nodeWeights, nodeParents)) {
             case ((weights, parents), (neighborNode, neighborWeight)) =>
@@ -37,7 +37,7 @@ object DijkstraAlgorithm extends App {
                 (weights + (neighborNode -> newWeight), parents + (neighborNode -> node))
               else (weights, parents)
           }
-          iter(graph, updatedNodeWeights, updatedNodeParents, newProcessedNodes)
+          iter(graph, updatedNodeWeights, updatedNodeParents, updatedProcessedNodes)
         case None => nodeWeights
       }
 
