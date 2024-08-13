@@ -19,6 +19,7 @@
 
 object Fibonnaci extends App {
 
+  // Time O(2^n) - Space O(n)
   def fibonnaciNthVal(num: Int): Int =
     if num <= 1 then num
     else fibonnaciNthVal(num - 1) + fibonnaciNthVal(num - 2)
