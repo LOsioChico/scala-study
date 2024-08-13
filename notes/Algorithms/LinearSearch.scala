@@ -14,9 +14,9 @@
 object LinearSearch extends App {
 
   def linearSearch(inputList: List[Int], target: Int) =
-    def iter(inputList: List[Int], target: Int, index: Int = 0): Int = 
-      inputList match
-        case head :: tail => 
+    def iter(nums: List[Int], target: Int, index: Int = 0): Int =
+      nums match
+        case head :: tail =>
           if head == target then index
           else iter(tail, target, index + 1)
         case Nil => -1

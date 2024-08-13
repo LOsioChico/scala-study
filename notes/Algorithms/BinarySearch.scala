@@ -15,12 +15,12 @@
 object BinarySearchR extends App {
 
   def binarySearch(inputList: List[Int], target: Int) =
-    def iter(inputList: List[Int], target: Int, low: Int, high: Int): Int =
-      inputList match
+    def iter(nums: List[Int], target: Int, low: Int, high: Int): Int =
+      nums match
         case head :: tail =>
           val mid = (low + high) / 2
-          if inputList(mid) < target then iter(inputList, target, mid + 1, high)
-          else if inputList(mid) > target then iter(inputList, target, low, mid - 1)
+          if nums(mid) < target then iter(nums, target, mid + 1, high)
+          else if nums(mid) > target then iter(nums, target, low, mid - 1)
           else mid
         case Nil => -1
 
