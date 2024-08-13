@@ -2,7 +2,10 @@
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
- *
+ * This bubble sort algoithm has a time complexity of O(n^2), since the running
+ * time is quadratic in the size of the input. If the input size is n, it will
+ * take approximately n^2 steps to complete the bubble sort.
+ * 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Reference: Grokking Data Structures & Algorithms for Coding Interviews
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
