@@ -18,6 +18,7 @@
 
 object QuickSort extends App {
 
+  // Time O(n log n) - Space O(n)
   def bubbleSort(nums: List[Int]): List[Int] =
     if nums.length <= 1 then nums
     else

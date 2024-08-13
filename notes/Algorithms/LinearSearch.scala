@@ -13,6 +13,7 @@
 
 object LinearSearch extends App {
 
+  // Time O(n) - Space O(1)
   def linearSearch(inputList: List[Int], target: Int) =
     def iter(nums: List[Int], target: Int, index: Int = 0): Int =
       nums match
