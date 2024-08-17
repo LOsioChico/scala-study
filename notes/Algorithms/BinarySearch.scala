@@ -19,8 +19,8 @@ object BinarySearchR extends App {
       nums match
         case head :: tail =>
           val mid = (low + high) / 2
-          if nums(mid) < target then iter(nums, target, mid + 1, high)
-          else if nums(mid) > target then iter(nums, target, low, mid - 1)
+          if nums(mid) < target then iter(nums, target, low = mid + 1, high)
+          else if nums(mid) > target then iter(nums, target, low, high = mid - 1)
           else mid
         case Nil => -1
 
