@@ -8,15 +8,11 @@
 
 object Once extends App {
   def once[T, R](fn: T => R): T => R = {
-    var isCalledOnce = false
-    var result: Option[R] = None
+    var firstArg: Option[T] = None
 
     (arg: T) => {
-      if (!isCalledOnce) {
-        result = Some(fn(arg))
-        isCalledOnce = true
-      }
-      result.get
+      if (firstArg.isEmpty) firstArg = Some(arg)
+      fn(firstArg.get)
     }
   }
 
