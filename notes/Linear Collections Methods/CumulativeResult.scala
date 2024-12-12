@@ -31,4 +31,44 @@ object CumulativeResult extends App {
   // op: zA + B = zAB
   // op: zAB + C = zABC
   // List(z, zA, zAB, zABC) <- ...but returns all intermediate results
+
+  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  
+  def tabulateFunc(i: Int) = {
+    println(s"op: $i * X = ${"X" * i}")
+    "X" * i
+  }
+
+  println(Seq.tabulate(5)(tabulateFunc))
+  // op: 0 * X =
+  // op: 1 * X = X
+  // op: 2 * X = XX
+  // op: 3 * X = XXX
+  // op: 4 * X = XXXX
+  // List(, X, XX, XXX, XXXX)
+
+  def iterateFunc(s: String) = {
+    println(s"op: $s + X = ${s + "X"}")
+    s + "X"
+  }
+
+  println(Seq.iterate("", 5)(iterateFunc))
+  // op:  + X = X
+  // op: X + X = XX
+  // op: XX + X = XXX
+  // op: XXX + X = XXXX
+  // List(, X, XX, XXX, XXXX)
+
+  def unfoldFunc(s: String) = {
+    println(s"op: $s = ${if s.isEmpty then None else Some(s, s.tail)}")
+    if s.isEmpty then None else Some(s, s.tail)
+  }
+
+  println(Seq.unfold("XXXX")(unfoldFunc))
+  // op: XXXX = Some(XXXX, XXX)
+  // op: XXX = Some(XXX, XX)
+  // op: XX = Some(XX, X)
+  // op: X = Some(X, )
+  // op:  = None
+  // List(XXXX, XXX, XX, X)
 }
