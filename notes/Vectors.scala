@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  * Vector is an List alternative for very large set of data that has better

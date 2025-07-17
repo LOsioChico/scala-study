@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  * This linear search algorithm hasta a time complexity of O(n), since the

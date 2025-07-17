@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 import scala.collection.immutable.Stream.{empty, cons}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -42,7 +40,7 @@ object Streams extends App {
   println(numStream)    // <- Stream(0, 1, 2, 3, <not computed>)
 
   println(numStream(9)) // <- 9
-  println(numStream) // <- Stream(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, <not computed>)
+  println(numStream)    // <- Stream(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, <not computed>)
 
   // The code above is intuitive. Only compute the elements until the index.
 

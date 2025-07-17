@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  * To get the binary number we need to convert the base 10 numbers to base 2.

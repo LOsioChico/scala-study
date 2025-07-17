@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Creates a function that can be called only once. Subsequent calls return the
  * result of the first call.

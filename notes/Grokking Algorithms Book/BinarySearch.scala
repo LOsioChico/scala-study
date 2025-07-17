@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  * EXERCISES
@@ -28,5 +26,5 @@ object BinarySearch extends App {
   // 1.2
   val namesList12 = List.range(0, namesList11.length * 2)
   println(findMaxSteps(namesList12)) // <- 8
-  
+
 }

@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  * Exercises: https://prnt.sc/1eMBUMbLw6Yj
@@ -29,7 +27,7 @@ object DijkstraAlgorithm extends App {
       findLowestWeightNode(nodeWeights, processedNodes) match {
         case Some((node, weight)) =>
           val updatedProcessedNodes = processedNodes + node
-          val neighbors         = graph(node)
+          val neighbors             = graph(node)
           val (updatedNodeWeights, updatedNodeParents) = neighbors.foldLeft((nodeWeights, nodeParents)) {
             case ((weights, parents), (neighborNode, neighborWeight)) =>
               val newWeight = weight + neighborWeight

@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Extends the Seq prototype with a method that returns the element at the
  * specified index. If the index is negative, it is used as an offset from the

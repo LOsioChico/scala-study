@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Reference:
  * https://stackoverflow.com/questions/17408880/reduce-fold-or-scan-left-right
@@ -33,7 +31,7 @@ object CumulativeResult extends App {
   // List(z, zA, zAB, zABC) <- ...but returns all intermediate results
 
   // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  
+
   def tabulateFunc(i: Int) = {
     println(s"op: $i * X = ${"X" * i}")
     "X" * i

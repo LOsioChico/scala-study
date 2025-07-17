@@ -1,5 +1,3 @@
-//> using scala "3.3.1"
-
 import scala.concurrent.{Future, Await}
 import scala.concurrent.duration._
 import concurrent.ExecutionContext.Implicits.global

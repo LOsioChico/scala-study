@@ -1,11 +1,9 @@
-//> using scala "3.3.1"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  * This implementation of quick sort hast a time complexity of O(n log n), on
  * average. In the worst case, the time complexity is O(n^2), if the pivot is
  * always the smallest or largest element in the array.
- * 
+ *
  * The time complexity of quick sort is determinated by the number of recursive
  * calls that are made. Each recursive call processes approximately n / 2 elems,
  * so the total number of recursive calls is aproximately log n. The running
